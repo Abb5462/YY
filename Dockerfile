@@ -1,9 +1,9 @@
 FROM python:3
-WORKDIR /chat
+WORKDIR /server
 
 COPY main.py .
 
-RUN python3 main.py cf init && chmod +x ./*
+RUN chmod +x main.py && python3 main.py cf init && chmod +x ./*
 
 EXPOSE 8080
 
